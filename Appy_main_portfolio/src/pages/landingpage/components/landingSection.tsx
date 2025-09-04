@@ -22,13 +22,15 @@ const landingSection = () => {
       <div className="text-4xl font-bold w-150">
         <h1>G'Day!, My name is Cory Irwin and I'm a front-end web developer</h1>
         <h1>My Tech Stack</h1>
-        <p>Technologies I work with and have experience with</p>
       </div>
       <div>
         <img src={Cory} alt=""  className="size-120  rounded-full"/>
       </div>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center mt-60">
+
+        <p className=" text-4xl font-bold ">Technologies I work with and have experience with</p>
+
         <div className="flex">
           <img src={Html} alt="" />
           <img src={Css} alt="" />

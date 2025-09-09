@@ -5,10 +5,21 @@ import FadeInSection from "./animations/FadeInSection";
 import TechStackShowcase from "./animations/TechStackShowcase";
 import ProjectsGrid from "../components/projectsGrid";
 
+
+
+const numberArray = [12, 58, 78, 1, 789, 78]
+
+
 const LandingSection = () => {
   return (
     <>
       <div className="mx-auto max-w-screen-xl my-10 px-4">
+
+        {
+          numberArray.map((value) => {
+            return <p>{value}</p>
+          })
+        }
 
         {/* Intro Section */}
         <FadeInSection>

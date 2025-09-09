@@ -1,0 +1,56 @@
+import React from "react";
+import ProjectCard from "../components/projectsComponent";
+import Intra from "../../../assets/Pages/landingPage/Projects/IntraBlog.png";
+import Admin from "../../../assets/Pages/landingPage/Projects/admin.png";
+import TechEcommerce from "../../../assets/Pages/landingPage/Projects/techEcommerce.png";
+
+const projects = [
+  {
+    title: "Ecommerce Admin BackEnd",
+    description: "Admin panel for managing products, orders, and users in an ecommerce platform.",
+    image: Admin,
+    techStack: "React, Node.js, TailwindCSS",
+    githubLink: "https://github.com/yourusername/admin-backend",
+    liveLink: "https://your-live-link.com",
+  },
+
+  {
+    title: "Sample Project",
+    description: "A sample project to showcase dummy data.",
+    image: TechEcommerce,
+    techStack: "TypeScript, Vite, TailwindCSS",
+    githubLink: "https://github.com/yourusername/sample-project",
+    liveLink: "https://sample-live-link.com",
+  },
+  
+    {
+    title: "Sample Project",
+    description: "A sample project to showcase dummy data.",
+    image: Intra,
+    techStack: "TypeScript, Vite, TailwindCSS",
+    githubLink: "https://github.com/yourusername/sample-project",
+    liveLink: "https://sample-live-link.com",
+  }
+  
+];
+
+
+const ProjectsGrid: React.FC = () => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4 ">
+      {projects.map((project, idx) => (
+        <ProjectCard
+          key={idx}
+          title={project.title}
+          description={project.description}
+          techStack={project.techStack}
+          image={project.image}
+          githubLink={project.githubLink}
+          liveLink={project.liveLink}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default ProjectsGrid;

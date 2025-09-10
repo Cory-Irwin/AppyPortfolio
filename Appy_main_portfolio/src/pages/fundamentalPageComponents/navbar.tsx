@@ -11,6 +11,7 @@ const navbar = () => {
         <a href="#" className="hover:underline">Home</a>
         <a href="#" className="hover:underline">About</a>
         <a href="#" className="hover:underline">Services</a>
+        <a href="/cvPage" className="hover:underline">CV</a>
       </div>
       <div className="flex-1 text-right">
         <a href="#" className="hover:underline">Contact Me</a>

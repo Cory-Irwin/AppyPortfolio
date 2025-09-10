@@ -1,0 +1,341 @@
+{
+  "basics": {
+    "name": "Cory Irwin",
+    "headline": "",
+    "email": "coryirwin9@gmail.com",
+    "phone": "0410 504 373",
+    "location": "",
+    "url": {
+      "label": "",
+      "href": ""
+    },
+    "customFields": [],
+    "picture": {
+      "url": "https://storage.rxresu.me/cm83wqoby4q3w1492vhchtlsc/pictures/fuxgpiuww6oy5rywcjbq1fw3.jpg",
+      "size": 225,
+      "aspectRatio": 0.75,
+      "borderRadius": 0,
+      "effects": {
+        "hidden": false,
+        "border": false,
+        "grayscale": false
+      }
+    }
+  },
+  "sections": {
+    "summary": {
+      "name": "Summary",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "summary",
+      "content": "<p>Following my increased usage of web-based technology in my previous retail work, I decided to pursue my passion for software development. </p><p>Demonstrating a commitment to continuous learning and innovation I have developed an independent portfolio of web application projects and personal contracting.</p><p> I look forward to transitioning to a full-time role where I can access additional resources and contribute my knowledge to a team of like-minded individuals. As my references will attest, I am a motivated and reliable person who applies and welcomes feedback. I look forward to hearing how I can best suit your organisation.</p><p></p>"
+    },
+    "awards": {
+      "name": "Awards",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "awards",
+      "items": []
+    },
+    "certifications": {
+      "name": "Certifications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "certifications",
+      "items": []
+    },
+    "education": {
+      "name": "Education",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "education",
+      "items": [
+        {
+          "id": "mk4z96b3jczvw0xt2muv1lk2",
+          "visible": true,
+          "institution": "TAFE NSW",
+          "studyType": "",
+          "area": "",
+          "score": "",
+          "date": "December 2024",
+          "summary": "<p>Diploma of Information Technology Advanced Programing (ICT50220)</p><p>Following completion of this nationally accredited diploma. I have furthered my knowledge regarding:</p><ul><li><p>Front end application architecture, particularly scalable interfaces, react native, UI logic, component design and performance optimization</p></li><li><p>Back end integration such as ‘model view controller' [MVC] and ‘c-sharp' [C#] data flow optimisation</p></li><li><p>Legal frameworks related to responsible handling of user data</p></li><li><p>Leading team projects in web design and mobile application development</p></li></ul><p></p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "experience": {
+      "name": "Experience",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "experience",
+      "items": [
+        {
+          "id": "k714g5h501y8rjd7hw54bt4i",
+          "visible": true,
+          "company": "Hardware & General - Brookvale",
+          "position": "Retail Associate   ",
+          "location": "",
+          "date": "August 2020 - Current",
+          "summary": "<p>Enhanced interpersonal skills by liaising with stakeholders and customers to align with organizational goals. Including:</p><ul><li><p>Problem solving</p></li><li><p>Appropriate escalation to senior individuals</p></li><li><p>Attention to detail</p></li><li><p>Customer facing professionalism</p></li></ul><p>Driven to pursue information technology field following hands-on experience with diverse software. Such as:</p><ul><li><p>Enterprise software frameworks</p></li><li><p>Product management</p></li><li><p>E-commerce listings</p></li><li><p>Data validation</p></li><li><p>Online order flow</p></li><li><p>Digital user satisfaction</p></li></ul>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "volunteer": {
+      "name": "Volunteering",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "volunteer",
+      "items": [
+        {
+          "id": "mg9glfhb7m7qklgkzf1igk7h",
+          "visible": true,
+          "organization": "Lifeline",
+          "position": "",
+          "location": "",
+          "date": "(July 2023, July 2024)",
+          "summary": "<p>Mona Vale art show</p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "lo57iyg18oybqnprp22pc0zr",
+          "visible": true,
+          "organization": "Lifeline",
+          "position": "",
+          "location": "",
+          "date": "(July 2025)",
+          "summary": "<p>Lifeline Knox Book fair</p>",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "interests": {
+      "name": "Interests",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "interests",
+      "items": []
+    },
+    "languages": {
+      "name": "Languages",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "languages",
+      "items": []
+    },
+    "profiles": {
+      "name": "Profiles",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "profiles",
+      "items": []
+    },
+    "projects": {
+      "name": "Projects",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "projects",
+      "items": []
+    },
+    "publications": {
+      "name": "Publications",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "publications",
+      "items": []
+    },
+    "references": {
+      "name": "References",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "references",
+      "items": [
+        {
+          "id": "u6o1vavzjqcw9lc6hpos4kah",
+          "visible": true,
+          "name": "Available Upon Request",
+          "description": "",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "peqoznfc2r7bba2gxi30jsre",
+          "visible": true,
+          "name": "Peter McGreggor ",
+          "description": "(Hardware & General manager)",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "b5y34taed0jx0ilqlmfxpepi",
+          "visible": true,
+          "name": "Louis Sacco ",
+          "description": "(Hardware & General manager)",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        },
+        {
+          "id": "l1xrzoux3d1a6xty0mhn8iam",
+          "visible": true,
+          "name": "Peter Holman ",
+          "description": " (TAFE Course Convener)",
+          "summary": "",
+          "url": {
+            "label": "",
+            "href": ""
+          }
+        }
+      ]
+    },
+    "skills": {
+      "name": "Skills",
+      "columns": 1,
+      "separateLinks": true,
+      "visible": true,
+      "id": "skills",
+      "items": [
+        {
+          "id": "pjx5kehcifnxeee9y4yqs4bp",
+          "visible": true,
+          "name": "Fluent in multiple front-end languages",
+          "description": "",
+          "level": 0,
+          "keywords": [
+            "HTML",
+            "CSS",
+            "TailwindCSS",
+            "TypeScript",
+            "JavaScript",
+            "API Integration",
+            "Figma",
+            "Adobe Creative Suite",
+            "Office 365"
+          ]
+        },
+        {
+          "id": "eblawwgvtajhm2vbxaowrvlh",
+          "visible": true,
+          "name": "Adept problem solving",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "dypz0dvxvmcsak7qurt9c82j",
+          "visible": true,
+          "name": "Entrepreneurial mindset",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "urklfx2iom074n57t1zw72aa",
+          "visible": true,
+          "name": "Analytical thinking",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "wl71pbg8vypb3746w84wkv71",
+          "visible": true,
+          "name": "Team Player",
+          "description": "",
+          "level": 0,
+          "keywords": []
+        }
+      ]
+    },
+    "custom": {}
+  },
+  "metadata": {
+    "template": "gengar",
+    "layout": [
+      [
+        [
+          "profiles",
+          "summary",
+          "experience",
+          "education",
+          "projects"
+        ],
+        [
+          "skills",
+          "interests",
+          "certifications",
+          "awards",
+          "publications",
+          "volunteer",
+          "references",
+          "languages"
+        ]
+      ]
+    ],
+    "css": {
+      "value": "* {\n\toutline: 1px solid #000;\n\toutline-offset: 4px;\n}",
+      "visible": false
+    },
+    "page": {
+      "margin": 18,
+      "format": "a4",
+      "options": {
+        "breakLine": true,
+        "pageNumbers": true
+      }
+    },
+    "theme": {
+      "background": "#ffffff",
+      "text": "#000000",
+      "primary": "#dc2626"
+    },
+    "typography": {
+      "font": {
+        "family": "IBM Plex Serif",
+        "subset": "latin",
+        "variants": [
+          "regular",
+          "italic",
+          "600"
+        ],
+        "size": 14
+      },
+      "lineHeight": 1.5,
+      "hideIcons": false,
+      "underlineLinks": true
+    },
+    "notes": ""
+  }
+}

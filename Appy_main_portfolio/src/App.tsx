@@ -1,18 +1,24 @@
 import { useState } from "react";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import Footer from "../src/pages/fundamentalPageComponents/footer"
 import "./Index.css";
 import Hero from "./pages/landingpage/heroPage";
 import AmbientBackground from "./pages/landingpage/components/animations/BackgroundAmbientGradient";
+import HeroPage from "./pages/landingpage/heroPage";
+import CVPage from "./pages/cvPage/cvPage";
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <>
-    <AmbientBackground>
-      <Hero />
-      </AmbientBackground>
-    </>
+    <Router>
+      <Routes>
+            <Route path="/" element={<HeroPage/>}/>
+            <Route path="CvPage" element={<CVPage/>}/>
+      </Routes>
+    </Router>
   );
 }
 

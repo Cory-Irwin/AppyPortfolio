@@ -6,12 +6,13 @@ import FadeInSection from "../landingpage/components/animations/FadeInSection";
 
 function AboutPage() {
   return (
-      <><AmbientBackground>
+      <>
+    
           <Navbar />
 
           <div className="min-h-screen bg-gray-50 text-gray-800">               
-              <div className="max-w-4xl mx-auto px-6 py-12">
-                  {/* About Me */}
+            <AmbientBackground>  <div className="max-w-4xl mx-auto px-6 py-12">
+                  {/* About Me */}  
                      <FadeInSection delay={0}>
                   <section className="mb-12">
                       <h2 className="text-3xl font-bold text-indigo-800 mb-4">About Me</h2>
@@ -23,7 +24,7 @@ function AboutPage() {
       <FadeInSection delay={300}>
                   {/* Skills */}
                   <section className="mb-12">
-                      <h2 className="text-2xl font-semibold text-indigo-800 mb-4">Skills</h2>
+                      <h2 className="text-2xl font-semibold text-white mb-4">Skills</h2>
                       <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 text-gray-700">
                           <li className="bg-white p-3 shadow-sm rounded-lg">HTML / CSS / TailwindCSS</li>
                           <li className="bg-white p-3 shadow-sm rounded-lg">JavaScript / TypeScript</li>
@@ -37,7 +38,7 @@ function AboutPage() {
                   {/* Experience */}
                         <FadeInSection delay={600}>
                   <section className="mb-12">
-                      <h2 className="text-2xl font-semibold text-indigo-800 mb-4">Work Experience</h2>
+                      <h2 className="text-2xl font-semibold text-white mb-4">Work Experience</h2>
                       <div className="space-y-4">
                           <div className="bg-white p-5 rounded-lg shadow-sm">
                               <h3 className="text-lg font-semibold">Retail Associate</h3>
@@ -54,7 +55,7 @@ function AboutPage() {
                   {/* Education */}
                          <FadeInSection delay={900}>
                   <section className="mb-12">
-                      <h2 className="text-2xl font-semibold text-indigo-800 mb-4">Education</h2>
+                      <h2 className="text-2xl font-semibold text-white mb-4">Education</h2>
                       <div className="bg-white p-5 rounded-lg shadow-sm">
                           <h3 className="text-lg font-semibold">Diploma of Information Technology Advanced Programming</h3>
                           <p className="text-sm text-gray-500">TAFE NSW | Dec 2024</p>
@@ -70,17 +71,17 @@ function AboutPage() {
                   {/* Volunteering */}
                       <FadeInSection delay={1200}>
                   <section>
-                      <h2 className="text-2xl font-semibold text-indigo-800 mb-4">Volunteering</h2>
+                      <h2 className="text-2xl font-semibold text-white mb-4">Volunteering</h2>
                       <ul className="space-y-3 text-gray-700">
                           <li className="bg-white p-3 shadow-sm rounded-lg">Lifeline (July 2023, 2024, 2025)</li>
                           <li className="bg-white p-3 shadow-sm rounded-lg">Mona Vale Art Show</li>
                           <li className="bg-white p-3 shadow-sm rounded-lg">Lifeline Knox Book Fair</li>
                       </ul>
                   </section>
-                  </FadeInSection>
+                  </FadeInSection> 
               </div>
-          </div>
-      </AmbientBackground><Footer /></>
+       </AmbientBackground>   </div>
+     <Footer /></>
   );
 }
 

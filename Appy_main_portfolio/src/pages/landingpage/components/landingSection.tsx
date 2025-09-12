@@ -24,18 +24,18 @@ const LandingSection = () => {
         {/* Intro Section */}
         <FadeInSection>
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-10">
-            <div className="text-center md:text-left w-full md:w-1/2">
-              <h1 className="text-5xl font-bold">G'Day! 👋</h1>
-              <h1 className="text-5xl font-bold">My name is</h1>
+            <div className="text-center md:text-left ">
+              <h1 className="text-6xl font-bold mt-4 text-white">G'Day! 👋</h1>
+              <h1 className="text-6xl font-bold mt-4 text-white">My name is</h1>
               <CoryIrwinGradient />
-              <h1 className="text-5xl font-bold">I'm a Junior Front-End Web Developer</h1>
+              <h1 className="text-6xl font-bold mt-4 text-white">I'm a Junior Front-End Web Developer</h1>
             </div>
 
             <div className="flex justify-center md:justify-end w-full md:w-1/2">
               <img
                 src={Cory}
                 alt="Cory Irwin"
-                className="w-72 h-72 md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
+                className="w-auto h-72 md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
               />
             </div>
           </div>
@@ -43,9 +43,9 @@ const LandingSection = () => {
 
         {/* Tech Stack Section */}
         <FadeInSection delay={600}>
-          <div className="text-center mt-12">
-            <h1 className="text-4xl font-bold py-4">My Tech Stack</h1>
-            <p className="text-2xl font-semibold py-4">
+          <div className="text-center mt-12   font-semibold text-white">
+            <h1 className="text-8xl font-bold  text-white py-4">My Tech Stack</h1>
+            <p className="text-4xl font-semibold py-4">
               Technologies I work with and have experience in
             </p>
             <TechStackShowcase />
@@ -54,9 +54,9 @@ const LandingSection = () => {
 
         {/* Project Contributions Section */}
         <FadeInSection delay={1200}>
-          <div className="text-center mt-16">
-            <h1 className="text-3xl font-bold py-2">Project Contributions</h1>
-            <p className="text-xl py-2">Projects I've contributed to</p>
+          <div className="text-center mt-16  font-semibold text-white">
+          <a href="/ProjectsPage" className="hover:underline text-8xl font-bold text-white py-2 hover:text-purple-500">Projects</a>
+            <p className="text-4xl py-8">Projects I've created</p>        
             <div className="w-full mx-auto max-w-screen-xl my-10 px-4">
               <ProjectsGrid />
             </div>

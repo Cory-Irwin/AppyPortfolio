@@ -21,5 +21,5 @@ const heroPage = () => {
 export default heroPage;
 // mx-auto max-w-screen-xl px-4 bg-black
 
-      <Hero />
+     
  

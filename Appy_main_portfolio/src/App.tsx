@@ -9,6 +9,8 @@ import Hero from "./pages/landingpage/heroPage";
 import AmbientBackground from "./pages/landingpage/components/animations/BackgroundAmbientGradient";
 import HeroPage from "./pages/landingpage/heroPage";
 import CVPage from "./pages/cvPage/cvPage";
+import AboutPage from "./pages/aboutMePage/aboutMePage";
+import ProjectsPage from "./pages/projectsPage/projectsPage";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -17,6 +19,8 @@ function App() {
       <Routes>
             <Route path="/" element={<HeroPage/>}/>
             <Route path="CvPage" element={<CVPage/>}/>
+                 <Route path="aboutMePage" element={<AboutPage/>}/>
+                 <Route path="projectsPage" element={<ProjectsPage/>}/>
       </Routes>
     </Router>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CoryIrwinGradient: React.FC = () => {
+function CoryIrwinGradient() {
   return (
     <>
       <style>{`
@@ -16,7 +16,7 @@ const CoryIrwinGradient: React.FC = () => {
       `}</style>
 
       <h1
-        className="text-5xl md:text-7xl font-extrabold tracking-tight 
+        className="text-8xl md:text-9xl font-extrabold tracking-tight 
                    text-transparent bg-clip-text 
                    bg-gradient-to-r from-sky-400 via-fuchsia-500 to-emerald-400 
                    animate-gradient"
@@ -25,6 +25,6 @@ const CoryIrwinGradient: React.FC = () => {
       </h1>
     </>
   );
-};
+}
 
 export default CoryIrwinGradient;

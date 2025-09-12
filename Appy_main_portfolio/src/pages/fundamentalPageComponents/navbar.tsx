@@ -17,7 +17,7 @@ const navbar = () => {
         <a href="/cvPage" className="hover:underline hover:text-purple-500">CV</a>
       </div>
       <div className="flex-1 text-right  text-3xl font-semibold ">
-        <a href="#" className="hover:underline hover:text-purple-500">Contact Me</a>
+        <a href="/contactPage" className="hover:underline hover:text-purple-500">Contact Me</a>
       </div>
     </nav>
   </header>

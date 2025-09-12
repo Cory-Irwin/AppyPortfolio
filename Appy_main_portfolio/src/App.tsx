@@ -11,6 +11,7 @@ import HeroPage from "./pages/landingpage/heroPage";
 import CVPage from "./pages/cvPage/cvPage";
 import AboutPage from "./pages/aboutMePage/aboutMePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
+import ContactMe from "./pages/contactPage/contactPage";
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="CvPage" element={<CVPage/>}/>
                  <Route path="aboutMePage" element={<AboutPage/>}/>
                  <Route path="projectsPage" element={<ProjectsPage/>}/>
+                 <Route path="contactPage" element={<ContactMe/>}/>
       </Routes>
     </Router>
   );

@@ -15,8 +15,8 @@ function AboutPage() {
                   {/* About Me */}  
                      <FadeInSection delay={0}>
                   <section className="mb-12">
-                      <h2 className="text-3xl font-bold text-indigo-800 mb-4">About Me</h2>
-                      <p className="text-lg leading-relaxed text-gray-700">
+                      <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
+                      <p className="text-lg leading-relaxed text-white">
                           Born in Australia
                       </p>
                   </section>

@@ -10,7 +10,7 @@ const AmbientBackground: React.FC<{ children?: React.ReactNode }> = ({ children 
           100% { background-position: 0% 50%; }
         }
         .ambient-gradient {
-          background: linear-gradient(-45deg, #0ea5e9, #8b5cf6, #10b981, #f43f5e);
+          background: linear-gradient(-45deg, #bba5, #8becf6, #10b9, #ffff);
           background-size: 400% 400%;
           animation: gradient-move 20s ease infinite;
         }

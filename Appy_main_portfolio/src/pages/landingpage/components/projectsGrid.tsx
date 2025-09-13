@@ -6,7 +6,7 @@ import TechEcommerce from "../../../assets/Pages/landingPage/Projects/techEcomme
 
 const projects = [
   {
-    title: "Ecommerce Admin BackEnd",
+    title: "Tech Ecommerce Admin BackEnd",
     description: "Admin panel for managing products, orders, and users in an ecommerce platform.",
     image: Admin,
     techStack: "React, Node.js, TailwindCSS",
@@ -14,7 +14,7 @@ const projects = [
     liveLink: "https://your-live-link.com",
   },
   {
-    title: "Sample Project",
+    title: "Tech Ecommerce Website",
     description: "A sample project to showcase dummy data.",
     image: TechEcommerce,
     techStack: "TypeScript, Vite, TailwindCSS",
@@ -22,7 +22,7 @@ const projects = [
     liveLink: "https://sample-live-link.com",
   },
   {
-    title: "Sample Project",
+    title: "IntraDesign Software",
     description: "A sample project to showcase dummy data.",
     image: Intra,
     techStack: "TypeScript, Vite, TailwindCSS",

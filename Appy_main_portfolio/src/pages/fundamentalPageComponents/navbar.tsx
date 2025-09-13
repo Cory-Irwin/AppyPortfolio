@@ -4,12 +4,14 @@ import Intra from "../../assets/Pages/landingPage/landingSection/Full Light.png"
 import HomePage from "../landingpage/heroPage"
 const navbar = () => {
   return (
-    <header>
-    <nav className="bg-gray-800 text-white p-4 flex items-center justify-between">
+    <header className="">
+    <nav className="bg-gray-800 text-white p-4 flex items-center justify-between mx-auto max-w-screen-xl my-10 px-4">
       <div className="flex-1">
-        <div className="text-lg font-bold"> <img src={Intra} className="w-48 h-auto"></img></div>
+        <div className="text-lg font-bold"><div className='font-bold  text-4xl'>
+ CI<span className='text-blue-300'>.</span>
+</div></div>
       </div>
-      <div className="flex-1 text-center space-x-4 text-3xl font-semibold  ">
+      <div className="flex-1 text-center space-x-12 text-3xl font-semibold  ">
         <a href="/" className="hover:underline hover:text-purple-500">Home</a>
         <a href="/aboutMePage" className="hover:underline hover:text-purple-500">About</a>
         <a href="/ProjectsPage" className="hover:underline hover:text-purple-500">Projects</a>

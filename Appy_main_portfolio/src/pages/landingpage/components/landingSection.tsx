@@ -35,7 +35,7 @@ const LandingSection = () => {
               <img
                 src={Cory}
                 alt="Cory Irwin"
-                className="w-auto h-72 md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
+                className="w-auto h-72 object-cover md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
               />
             </div>
           </div>
@@ -43,7 +43,7 @@ const LandingSection = () => {
 
         {/* Tech Stack Section */}
         <FadeInSection delay={600}>
-          <div className="text-center mt-12   font-semibold text-white">
+          <div className="text-center mt-100   font-semibold text-white">
             <h1 className="text-8xl font-bold  text-white py-4">My Tech Stack</h1>
             <p className="text-4xl font-semibold py-4">
               Technologies I work with and have experience in
@@ -53,10 +53,10 @@ const LandingSection = () => {
         </FadeInSection>
 
         {/* Project Contributions Section */}
-        <FadeInSection delay={1200}>
-          <div className="text-center mt-16  font-semibold text-white">
+        <FadeInSection delay={600}>
+          <div className="text-center mt-100  mb-40 font-semibold text-white">
           <a href="/ProjectsPage" className="hover:underline text-8xl font-bold text-white py-2 hover:text-purple-500">Projects</a>
-            <p className="text-4xl py-8">Projects I've created</p>        
+            <p className="text-4xl py-8"> I've created or contributed to.</p>        
             <div className="w-full mx-auto max-w-screen-xl my-10 px-4">
               <ProjectsGrid />
             </div>
@@ -65,7 +65,7 @@ const LandingSection = () => {
 
       </div>
 
-      <footer></footer>
+    
     </>
   );
 };

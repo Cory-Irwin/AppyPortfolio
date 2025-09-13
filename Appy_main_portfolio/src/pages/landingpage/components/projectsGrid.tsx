@@ -13,7 +13,6 @@ const projects = [
     githubLink: "https://github.com/yourusername/admin-backend",
     liveLink: "https://your-live-link.com",
   },
-
   {
     title: "Sample Project",
     description: "A sample project to showcase dummy data.",
@@ -22,22 +21,19 @@ const projects = [
     githubLink: "https://github.com/yourusername/sample-project",
     liveLink: "https://sample-live-link.com",
   },
-  
-    {
+  {
     title: "Sample Project",
     description: "A sample project to showcase dummy data.",
     image: Intra,
     techStack: "TypeScript, Vite, TailwindCSS",
     githubLink: "https://github.com/yourusername/sample-project",
     liveLink: "https://sample-live-link.com",
-  }
-  
+  },
 ];
 
-
-const ProjectsGrid: React.FC = () => {
+function ProjectsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4">
       {projects.map((project, idx) => (
         <ProjectCard
           key={idx}
@@ -51,6 +47,6 @@ const ProjectsGrid: React.FC = () => {
       ))}
     </div>
   );
-};
+}
 
 export default ProjectsGrid;

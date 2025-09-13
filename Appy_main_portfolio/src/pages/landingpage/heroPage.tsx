@@ -11,7 +11,8 @@ const heroPage = () => {
       <div className="">
            <AmbientBackground>
         <Navbar />
-        <LandingSection/></AmbientBackground>
+        <LandingSection/>
+        </AmbientBackground>
        {" "}      <Footer/>
       </div>
     </>

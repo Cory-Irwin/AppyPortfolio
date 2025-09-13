@@ -15,14 +15,16 @@ function CoryIrwinGradient() {
         }
       `}</style>
 
-      <h1
-        className="text-8xl md:text-9xl font-extrabold tracking-tight 
-                   text-transparent bg-clip-text 
-                   bg-gradient-to-r from-sky-400 via-fuchsia-500 to-emerald-400 
-                   animate-gradient"
-      >
-        Cory Irwin
-      </h1>
+<h1
+  className="text-9xl md:text-9xl font-extrabold tracking-tight 
+             text-transparent bg-clip-text 
+             bg-gradient-to-r from-sky-400 via-fuchsia-500 to-emerald-400 
+             animate-gradient
+             leading-[1.3] overflow-visible "
+>
+  Cory Irwin
+</h1>
+
     </>
   );
 }

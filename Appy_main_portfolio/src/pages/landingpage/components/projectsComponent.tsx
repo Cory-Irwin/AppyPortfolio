@@ -1,5 +1,6 @@
 import React from "react";
 import Github from "../../../assets/Pages/landingPage/landingSection/gitter.svg";
+import Link from "../../../assets/Pages/landingPage/landingSection/link.svg";
 
 interface ProjectCardProps {
   title: string;
@@ -40,22 +41,22 @@ function ProjectCard({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
+              className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
             >
+              <img src={Link} alt="Live Preview" className="w-5 h-auto invert" />
               Live Preview
             </a>
           )}
+
           {githubLink && (
             <a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
+              className="flex-1 flex items-center justify-center gap-2 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
             >
-              <div className="flex flex-row justify-center gap-2">
-                <img src={Github} alt="" className="w-5 h-auto invert" />
-                View Code
-              </div>
+              <img src={Github} alt="GitHub" className="w-5 h-auto invert" />
+              View Code
             </a>
           )}
         </div>

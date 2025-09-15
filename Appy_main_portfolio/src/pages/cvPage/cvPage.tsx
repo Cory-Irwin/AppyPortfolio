@@ -12,7 +12,7 @@ function CVPage() {
     <>
       <AmbientBackground>
         <Navbar />
-        <div className="mb-10">
+        <div className="mb-10 py-12">
           {/* Download Button */}
           <div className="flex justify-end max-w-5xl mx-auto mt-6 px-4">
             <a
@@ -25,7 +25,7 @@ function CVPage() {
           </div>
 
           {/* CV Content */}
-          <div className="bg-white text-black mt-6 font-serif max-w-5xl mx-auto p-8 grid grid-cols-3 gap-6 shadow-md">
+          <div className="bg-white  text-black mt-6 font-serif max-w-5xl mx-auto p-8 grid grid-cols-3 gap-6 shadow-md">
             {/* Left Column */}
             <div className="col-span-1 space-y-6">
               {/* Picture */}

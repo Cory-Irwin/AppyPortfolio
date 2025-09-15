@@ -4,6 +4,7 @@ import CoryIrwinGradient from "./animations/CoryIrwinGradient";
 import FadeInSection from "./animations/FadeInSection";
 import TechStackShowcase from "./animations/TechStackShowcase";
 import ProjectsGrid from "../components/projectsGrid";
+import Navbar from "../../fundamentalPageComponents/navbar";
 
 
 
@@ -13,7 +14,8 @@ import ProjectsGrid from "../components/projectsGrid";
 const LandingSection = () => {
   return (
     <>
-      <div className="mx-auto max-w-screen-xl my-10 px-4">
+      
+      <div className="mx-auto max-w-screen-xl top-0  px-4 ">
 
         {/* {
           numberArray.map((value) => {
@@ -54,7 +56,7 @@ const LandingSection = () => {
 
         {/* Project Contributions Section */}
         <FadeInSection delay={600}>
-          <div className="text-center mt-100  mb-40 font-semibold text-white">
+          <div className="text-center mt-100  font-semibold py-24  text-white ">
           <a href="/ProjectsPage" className="hover:underline text-8xl font-bold text-white py-2 hover:text-purple-500">Projects</a>
             <p className="text-4xl py-8"> I've created or contributed to.</p>        
             <div className="w-full mx-auto max-w-screen-xl my-10 px-4">

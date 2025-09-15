@@ -6,20 +6,18 @@ import Footer from "../fundamentalPageComponents/footer";
 function ContactMe() {
   return (
     <>
-      <Navbar />
-      
+      {/* Gradient background wraps everything */}
       <AmbientBackground>
-        <div className="min-h-screen flex flex-col items-center justify-center p-6">
-          <h1 className="text-5xl font-bold mb-8 text-gray-100">
-            Contact Me
-          </h1>
+        {/* Sticky navbar inside gradient */}
+        <Navbar />
+
+        {/* Contact content */}
+        <div className="flex flex-col items-center justify-center min-h-screen px-6 py-12">
+          <h1 className="text-5xl font-bold mb-8 text-gray-100">Contact Me</h1>
 
           <form className="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg space-y-6">
             <div>
-              <label
-                className="block text-gray-700 font-semibold mb-2"
-                htmlFor="name"
-              >
+              <label className="block text-gray-700 font-semibold mb-2" htmlFor="name">
                 Name
               </label>
               <input
@@ -31,10 +29,7 @@ function ContactMe() {
             </div>
 
             <div>
-              <label
-                className="block text-gray-700 font-semibold mb-2"
-                htmlFor="email"
-              >
+              <label className="block text-gray-700 font-semibold mb-2" htmlFor="email">
                 Email
               </label>
               <input
@@ -46,10 +41,7 @@ function ContactMe() {
             </div>
 
             <div>
-              <label
-                className="block text-gray-700 font-semibold mb-2"
-                htmlFor="message"
-              >
+              <label className="block text-gray-700 font-semibold mb-2" htmlFor="message">
                 Message
               </label>
               <textarea
@@ -69,7 +61,7 @@ function ContactMe() {
           </form>
         </div>
       </AmbientBackground>
-      
+
       <Footer />
     </>
   );

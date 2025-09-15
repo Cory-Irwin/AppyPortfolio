@@ -33,7 +33,7 @@ const projects = [
 
 function ProjectsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 px-4 ">
       {projects.map((project, idx) => (
         <ProjectCard
           key={idx}

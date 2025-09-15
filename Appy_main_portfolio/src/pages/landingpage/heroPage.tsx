@@ -5,22 +5,18 @@ import Footer from "../../../src/pages/fundamentalPageComponents/footer"
 import "../../Index.css";
 import Hero from "../../pages/landingpage/heroPage";
 import AmbientBackground from "../../pages/landingpage/components/animations/BackgroundAmbientGradient";
-const heroPage = () => {
+
+const HeroPage = () => {
   return (
     <>
-      <div className="">
-           <AmbientBackground>
+      {/* Remove bg-black wrapper here */}
+      <AmbientBackground>
         <Navbar />
-        <LandingSection/>
-        </AmbientBackground>
-       {" "}      <Footer/>
-      </div>
+        <LandingSection />
+      </AmbientBackground>
+
+      <Footer />
     </>
   );
 };
-
-export default heroPage;
-// mx-auto max-w-screen-xl px-4 bg-black
-
-     
- 
+export default HeroPage;

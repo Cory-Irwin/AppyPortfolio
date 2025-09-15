@@ -25,7 +25,7 @@ const LandingSection = () => {
 
         {/* Intro Section */}
         <FadeInSection>
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 py-10">
+          <div className="flex flex-col md:flex-row justify-between  items-center gap-6 py-10">
             <div className="text-center md:text-left ">
               <h1 className="text-6xl font-bold mt-4 text-white">G'Day! 👋</h1>
               <h1 className="text-6xl font-bold mt-4 text-white">My name is</h1>
@@ -33,12 +33,13 @@ const LandingSection = () => {
               <h1 className="text-6xl font-bold mt-4 text-white">I'm a Junior Front-End Web Developer</h1>
             </div>
 
-            <div className="flex justify-center md:justify-end w-full md:w-1/2">
-              <img
-                src={Cory}
-                alt="Cory Irwin"
-                className="w-auto h-72 object-cover md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
-              />
+            <div className="flex justify-center md:justify-end w-full  md:w-1/2">
+        <img
+  src={Cory}
+  alt="Cory Irwin"
+  className="w-auto h-72 object-cover object-top md:w-96 md:h-96 border-8 border-blue-300 rounded-full animate-float"
+/>
+
             </div>
           </div>
         </FadeInSection>

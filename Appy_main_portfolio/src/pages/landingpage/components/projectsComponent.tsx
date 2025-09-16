@@ -27,7 +27,7 @@ function ProjectCard({
       </div>
 
       {/* Info below */}
-      <div className="p-6 flex flex-col justify-between flex-1">
+      <div className="p-8 flex flex-col justify-between flex-1">
         <div>
           <h2 className="text-2xl font-bold mb-2">{title}</h2>
           <p className="text-gray-700 text-sm mb-4">{description}</p>
@@ -41,7 +41,7 @@ function ProjectCard({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
+              className="flex-1 flex  items-center justify-center gap-2 py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
             >
               <img src={Link} alt="Live Preview" className="w-5 h-auto invert" />
               Live Preview
@@ -53,7 +53,7 @@ function ProjectCard({
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
+              className="flex-1 flex  items-center justify-center gap-2 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition"
             >
               <img src={Github} alt="GitHub" className="w-5 h-auto invert" />
               View Code

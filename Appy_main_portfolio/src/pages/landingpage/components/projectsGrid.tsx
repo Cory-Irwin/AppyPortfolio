@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: "Tech Ecommerce Website",
-    description: "A sample project to showcase dummy data.",
+    description: "Ecommerce website designed with Cilicon Ecommerce Figma Design inspriation. ",
     image: TechEcommerce,
     techStack: "TypeScript, Vite, TailwindCSS",
     githubLink: "https://github.com/yourusername/sample-project",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "IntraDesign Software",
-    description: "A sample project to showcase dummy data.",
+    description: "Contributer to the blog posting and maintenence of Intra-Design Software's main Website. Director of CSS designing and feedback provider.",
     image: Intra,
     techStack: "TypeScript, Vite, TailwindCSS",
     githubLink: "https://github.com/yourusername/sample-project",

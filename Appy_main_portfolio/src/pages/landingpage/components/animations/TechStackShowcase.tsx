@@ -13,8 +13,8 @@ import NodeJs from "../../../../assets/Pages/landingPage/landingSection/nodjs.sv
 import NextJs from "../../../../assets/Pages/landingPage/landingSection/nextjs.svg";
 import PostGress from "../../../../assets/Pages/landingPage/landingSection/postgres.svg";
 
-// CSS for floating animation
-const floatStyle = `
+// Floating + glow + smooth transitions
+const floatAndGlowStyle = `
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -23,14 +23,20 @@ const floatStyle = `
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+.icon-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.icon-hover:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(0, 255, 255, 0.6));
+}
 `;
 
 interface FadeInSectionProps {
   children: React.ReactNode;
-  delay?: number; // in milliseconds
+  delay?: number;
 }
 
-const FadeInSection: React.FC<FadeInSectionProps> = ({ children, delay = 0 }) => {
+function FadeInSection({ children, delay = 0 }: FadeInSectionProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -62,52 +68,99 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children, delay = 0 }) =>
       {children}
     </div>
   );
-};
+}
 
-const TechStackShowcase: React.FC = () => {
-  const firstRow = [Html, Css, Javascript, ReactIcon, TailwindCSS, Git];
-  const secondRow = [DotNet, ReactNative, NodeJs, TypeScript, NextJs, PostGress];
+interface Tech {
+  icon: string;
+  name: string;
+  url: string;
+  description: string;
+}
+
+const techStack: Tech[] = [
+  { icon: Html, name: "HTML", url: "https://developer.mozilla.org/en-US/docs/Web/HTML", description: "Markup language I use to structure web pages." },
+  { icon: Css, name: "CSS", url: "https://developer.mozilla.org/en-US/docs/Web/CSS", description: "Styling language I use to design layouts and visual aesthetics." },
+  { icon: Javascript, name: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", description: "Programming language I use to make web pages interactive." },
+  { icon: ReactIcon, name: "React", url: "https://reactjs.org/", description: "JavaScript library I use to build interactive UIs." },
+  { icon: TailwindCSS, name: "TailwindCSS", url: "https://tailwindcss.com/", description: "Utility-first CSS framework I use for fast styling." },
+  { icon: Git, name: "Git", url: "https://git-scm.com/", description: "Version control system I use to manage code changes." },
+  { icon: DotNet, name: ".NET", url: "https://dotnet.microsoft.com/", description: "Framework I use for building backend services and APIs." },
+  { icon: ReactNative, name: "React Native", url: "https://reactnative.dev/", description: "Framework I use to build mobile applications." },
+  { icon: NodeJs, name: "Node.js", url: "https://nodejs.org/", description: "JavaScript runtime I use for server-side applications." },
+  { icon: TypeScript, name: "TypeScript", url: "https://www.typescriptlang.org/", description: "Superset of JavaScript I use for type safety and better code maintainability." },
+  { icon: NextJs, name: "Next.js", url: "https://nextjs.org/", description: "React framework I use for server-side rendering and routing." },
+  { icon: PostGress, name: "PostgreSQL", url: "https://www.postgresql.org/", description: "Database system I use to store and manage data." },
+];
+
+function TechStackShowcase() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [tilt, setTilt] = useState<{ x: number; y: number }[]>(Array(techStack.length).fill({ x: 0, y: 0 }));
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20; // max rotation 10deg
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -20;
+    setTilt((prev) => {
+      const copy = [...prev];
+      copy[index] = { x, y };
+      return copy;
+    });
+  };
+
+  const handleMouseLeave = (index: number) => {
+    setTilt((prev) => {
+      const copy = [...prev];
+      copy[index] = { x: 0, y: 0 };
+      return copy;
+    });
+  };
 
   return (
     <>
-      <style>{floatStyle}</style>
+      <style>{floatAndGlowStyle}</style>
 
       <div className="flex flex-col gap-y-12 mt-20">
         <FadeInSection>
-          <div className="flex justify-between gap-4">
-            {firstRow.map((icon, i) => (
-              <img
-                key={i}
-                src={icon}
-                alt=""
-                className="animate-float"
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 justify-items-center">
+            {techStack.map((tech, i) => {
+              const scale = hoveredIndex === i ? 1.3 : hoveredIndex !== null ? 0.9 : 1;
+              const zIndex = hoveredIndex === i ? 10 : 1;
+              const { x, y } = tilt[i];
+
+              return (
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center transition-transform duration-300"
+                  style={{
+                    transform: `scale(${scale}) rotateX(${y}deg) rotateY(${x}deg)`,
+                    zIndex,
+                  }}
+                  onMouseEnter={() => setHoveredIndex(i)}
+                  onMouseLeave={() => {
+                    setHoveredIndex(null);
+                    handleMouseLeave(i);
+                  }}
+                  onMouseMove={(e) => handleMouseMove(e, i)}
+                >
+                  <a href={tech.url} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={tech.icon}
+                      alt={tech.name}
+                      className="animate-float icon-hover w-24 h-24 md:w-32 md:h-32"
+                      style={{ animationDelay: `${i * 0.1}s` }}
+                    />
+                  </a>
+                  <p className="mt-2 text-sm md:text-base">
+                    <strong>{tech.name}:</strong> {tech.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </FadeInSection>
-
-      <FadeInSection>
-  <div className="flex flex-wrap justify-between gap-4">
-    {secondRow.map((icon, i) => (
-      <img
-        key={i}
-        src={icon}
-        alt=""
-        className="animate-float"
-        style={{
-          width: "131px",
-          height: "131px",
-          animationDelay: `${i * 0.2}s`,
-        }}
-      />
-    ))}
-  </div>
-</FadeInSection>
-
       </div>
     </>
   );
-};
+}
 
 export default TechStackShowcase;

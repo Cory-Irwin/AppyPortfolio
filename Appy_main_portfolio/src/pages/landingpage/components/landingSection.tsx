@@ -3,7 +3,7 @@ import Cory from "../../../assets/Pages/landingPage/landingSection/coryIrwin.png
 import CoryIrwinGradient from "./animations/CoryIrwinGradient";
 import FadeInSection from "./animations/FadeInSection";
 import TechStackShowcase from "./animations/TechStackShowcase";
-import ProjectsGrid from "../components/projectsGrid";
+import ProjectsGrid from "./projectsGrid";
 import AmbientBackground from "./animations/BackgroundAmbientGradient";
 import Navbar from "../../fundamentalPageComponents/navbar";
 
@@ -102,6 +102,107 @@ const LandingSection = () => {
           </FadeInSection>
         </div>
       </div>
+      <section aria-label="About Me" className="py-20 mt-128 bg-transparent">
+        <FadeInSection>
+          <div className="max-w-5xl mx-auto text-center px-4">
+        <h2
+
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+            >
+           About Me
+            </h2>
+            <p
+              className={`mt-4 text-lg sm:text-xl md:text-2xl ${subTextColor}`}
+            >
+              Born in Australia, I have always been fascinated by how the web
+              works. Exploring how websites are built and understanding best
+              practices in web development has been a passion of mine. Over
+              time, my curiosity has grown into a deeper appreciation for the
+              complexities of web technologies and the creativity involved in
+              crafting seamless digital experiencee
+            </p>
+          </div>
+        </FadeInSection>
+      </section>
+      <section aria-label="Experience" className="mt-128  py-20 bg-transparent">
+        <FadeInSection>
+          <div className="max-w-5xl mx-auto text-center px-4">
+                   <h2
+
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+            >
+           My experience
+                      </h2>
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-10">
+              {[
+                { number: "12+", label: "Projects Completed" },
+                { number: "8+", label: "Technologies" },
+                { number: "2", label: "Years Learning" },
+                { number: "100%", label: "Passion for Coding" },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105"
+                >
+                  <p className={`text-5xl font-bold ${textColor}`}>
+                    {item.number}
+                  </p>
+                  <p className={`mt-2 ${subTextColor}`}>{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeInSection>
+      </section>
+
+        <section aria-label="Fun Facts" className="mt-128 py-20 bg-transparent">
+    <FadeInSection>
+      <div className="max-w-5xl mx-auto text-center px-4">
+                <h2
+
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+            >
+        Fun Facts
+                      </h2>
+        <div className="mt-12 grid md:grid-cols-3 gap-10">
+          {[
+            { title: "🎮 Gaming Enthusiast", text: "I love strategy games and retro consoles." },
+            { title: "📚 Lifelong Learner", text: "Always exploring new frameworks and libraries." },
+            { title: "🌏 Traveler", text: "I enjoy exploring cultures and taking inspiration from design worldwide." },
+          ].map((item, idx) => (
+            <div key={idx} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105">
+              <p className={`text-2xl font-bold ${textColor}`}>{item.title}</p>
+              <p className={`${subTextColor}`}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </FadeInSection>
+  </section>
+
+    <section aria-label="Blog" className="mt-128 pb-24 bg-transparent">
+    <FadeInSection>
+      <div className="max-w-5xl mx-auto text-center px-4">
+    <h2
+
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+            >
+ Latest Articles
+                      </h2>
+        <p className={`mt-4 ${subTextColor}`}>Sharing what I’ve learned and projects I’m working on.</p>
+        <div className="mt-12 grid md:grid-cols-3 gap-10">
+          {[1,2,3].map((i) => (
+            <div key={i} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg">
+              <h3 className={`text-xl font-bold ${textColor}`}>Article {i}</h3>
+              <p className={`mt-2 ${subTextColor}`}>Brief description of the article content.</p>
+              <a href={`/blog/article${i}`} className="mt-4 inline-block text-blue-500 hover:text-purple-500 font-semibold">Read More →</a>
+            </div>
+          ))}
+        </div>
+      </div> 
+    </FadeInSection>
+  </section>
+  
     </AmbientBackground>
   );
 };

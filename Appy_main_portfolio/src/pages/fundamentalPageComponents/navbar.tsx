@@ -9,64 +9,51 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Listen for scroll events
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Adjust threshold as needed
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navBg = darkMode
+    ? isScrolled
+      ? "bg-gray-900/60 backdrop-blur-md text-white"
+      : "bg-gray-900 text-white"
+    : isScrolled
+    ? "bg-gray-100/60 backdrop-blur-md text-gray-900"
+    : "bg-gray-100 text-gray-900";
+
+  const mobileBg = darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900";
+
   return (
     <header className="sticky top-8 z-50">
       <nav
-        className={`relative flex items-center justify-between w-[90%] max-w-screen-xl mx-auto p-4 rounded-full shadow-lg transition-colors
-          ${
-            darkMode
-              ? isScrolled
-                ? "bg-gray-900/60 text-white backdrop-blur-md"
-                : "bg-gray-900 text-white"
-              : isScrolled
-              ? "bg-gray-100/60 text-gray-900 backdrop-blur-md"
-              : "bg-gray-100 text-gray-900"
-          }`}
+        className={`relative flex items-center justify-between w-[90%] max-w-screen-xl mx-auto p-4 rounded-full shadow-lg transition-colors ${navBg}`}
       >
-        {/* Left: Logo */}
+        {/* Logo */}
         <div className="flex font-bold text-4xl z-20">
           <a
             href="/"
-            className={`hover:underline hover:text-purple-500 transition-colors ${
-              darkMode ? "text-white" : "text-gray-900"
-            }`}
+            className={`hover:underline hover:text-purple-500 transition-colors`}
           >
             CI.
           </a>
         </div>
 
-        {/* Center: Desktop Links */}
+        {/* Desktop Links */}
         <div className="hidden md:flex flex-1 justify-center gap-12 text-2xl font-semibold z-10">
-          <a
-            href="/aboutMePage"
-            className="hover:underline hover:text-purple-500 transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="/ProjectsPage"
-            className="hover:underline hover:text-purple-500 transition-colors"
-          >
-            Projects
-          </a>
-          <a
-            href="/cvPage"
-            className="hover:underline hover:text-purple-500 transition-colors"
-          >
-            CV
-          </a>
+          {["About", "Projects", "CV"].map((link) => (
+            <a
+              key={link}
+              href={`/${link.toLowerCase()}Page`}
+              className="hover:underline hover:text-purple-500 transition-colors"
+            >
+              {link}
+            </a>
+          ))}
         </div>
 
-        {/* Right: Contact + Toggle + Hamburger */}
+        {/* Right Section */}
         <div className="flex items-center space-x-4 flex-shrink-0">
           <a
             className="hidden md:inline-block text-2xl font-semibold hover:underline hover:text-purple-500 transition-colors"
@@ -88,61 +75,37 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex flex-col justify-center items-center space-y-1.5 p-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-700 transition"
+            className={`md:hidden p-2 rounded-lg transition ${
+              darkMode ? "hover:bg-gray-700" : "hover:bg-gray-300"
+            }`}
           >
-            <span
-              className={`block w-6 h-0.5 bg-current transition-transform ${
-                isOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
-            ></span>
-            <span
-              className={`block w-6 h-0.5 bg-current transition-opacity ${
-                isOpen ? "opacity-0" : ""
-              }`}
-            ></span>
-            <span
-              className={`block w-6 h-0.5 bg-current transition-transform ${
-                isOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
-            ></span>
+            {/* 
+              TODO: Replace with SVG icons
+              Example:
+
+              {isOpen ? (
+                <YourCloseSVGIcon className="w-6 h-6" />
+              ) : (
+                <YourHamburgerSVGIcon className="w-6 h-6" />
+              )}
+            */}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-lg rounded-b-lg md:hidden flex flex-col items-center py-4 space-y-4">
-            <a
-              href="/aboutMePage"
-              className={`text-xl font-semibold hover:underline hover:text-purple-500 ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
-            >
-              About
-            </a>
-            <a
-              href="/ProjectsPage"
-              className={`text-xl font-semibold hover:underline hover:text-purple-500 ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Projects
-            </a>
-            <a
-              href="/cvPage"
-              className={`text-xl font-semibold hover:underline hover:text-purple-500 ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
-            >
-              CV
-            </a>
-            <a
-              href="/contactPage"
-              className={`text-xl font-semibold hover:underline hover:text-purple-500 ${
-                darkMode ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Contact Me
-            </a>
+          <div
+            className={`absolute top-full left-0 w-full shadow-lg rounded-b-lg md:hidden flex flex-col items-center py-4 space-y-4 transition-colors ${mobileBg}`}
+          >
+            {["About", "Projects", "CV", "Contact Me"].map((link) => (
+              <a
+                key={link}
+                href={`/${link.replace(" ", "").toLowerCase()}Page`}
+                className="text-xl font-semibold hover:underline hover:text-purple-500 transition-colors"
+              >
+                {link}
+              </a>
+            ))}
           </div>
         )}
       </nav>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -18,11 +18,11 @@ function App() {
   return (
     <Router>
       <Routes>
-            <Route path="/" element={<HeroPage/>}/>
-            <Route path="CvPage" element={<CVPage/>}/>
-                 <Route path="aboutMePage" element={<AboutPage/>}/>
-                 <Route path="projectsPage" element={<ProjectsPage/>}/>
-                 <Route path="contactPage" element={<ContactMe/>}/>
+        <Route path="/" element={<HeroPage />} />
+        <Route path="CvPage" element={<CVPage />} />
+        <Route path="aboutMePage" element={<AboutPage />} />
+        <Route path="projectsPage" element={<ProjectsPage />} />
+        <Route path="contactPage" element={<ContactMe />} />
       </Routes>
     </Router>
   );

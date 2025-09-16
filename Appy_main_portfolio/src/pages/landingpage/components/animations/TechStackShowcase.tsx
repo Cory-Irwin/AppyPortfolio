@@ -12,24 +12,7 @@ import TypeScript from "../../../../assets/Pages/landingPage/landingSection/type
 import NodeJs from "../../../../assets/Pages/landingPage/landingSection/nodjs.svg";
 import NextJs from "../../../../assets/Pages/landingPage/landingSection/nextjs.svg";
 import PostGress from "../../../../assets/Pages/landingPage/landingSection/postgres.svg";
-
-// Floating + glow + smooth transitions
-const floatAndGlowStyle = `
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-.icon-hover {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.icon-hover:hover {
-  filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(0, 255, 255, 0.6));
-}
-`;
+import useTheme from "../../../../hooks/useTheme";
 
 interface FadeInSectionProps {
   children: React.ReactNode;
@@ -93,54 +76,17 @@ const techStack: Tech[] = [
 ];
 
 function TechStackShowcase() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [tilt, setTilt] = useState<{ x: number; y: number }[]>(Array(techStack.length).fill({ x: 0, y: 0 }));
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20; // max rotation 10deg
-    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -20;
-    setTilt((prev) => {
-      const copy = [...prev];
-      copy[index] = { x, y };
-      return copy;
-    });
-  };
-
-  const handleMouseLeave = (index: number) => {
-    setTilt((prev) => {
-      const copy = [...prev];
-      copy[index] = { x: 0, y: 0 };
-      return copy;
-    });
-  };
+  const { activeTheme } = useTheme()
 
   return (
     <>
-      <style>{floatAndGlowStyle}</style>
-
       <div className="flex flex-col gap-y-12 mt-20">
         <FadeInSection>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-8 justify-items-center">
-            {techStack.map((tech, i) => {
-              const scale = hoveredIndex === i ? 1.3 : hoveredIndex !== null ? 0.9 : 1;
-              const zIndex = hoveredIndex === i ? 10 : 1;
-              const { x, y } = tilt[i];
-
-              return (
+            {techStack.map((tech, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-center text-center transition-transform duration-300"
-                  style={{
-                    transform: `scale(${scale}) rotateX(${y}deg) rotateY(${x}deg)`,
-                    zIndex,
-                  }}
-                  onMouseEnter={() => setHoveredIndex(i)}
-                  onMouseLeave={() => {
-                    setHoveredIndex(null);
-                    handleMouseLeave(i);
-                  }}
-                  onMouseMove={(e) => handleMouseMove(e, i)}
+                  className="flex flex-col items-center text-center transition-transform duration-300 hover:scale-110"
                 >
                   <a href={tech.url} target="_blank" rel="noopener noreferrer">
                     <img
@@ -150,12 +96,13 @@ function TechStackShowcase() {
                       style={{ animationDelay: `${i * 0.1}s` }}
                     />
                   </a>
-                  <p className="mt-2 text-sm md:text-base">
+                  <p className="mt-2 text-sm md:text-base" style={{
+                    color: activeTheme === 'Dark' ? 'white' : 'black'
+                  }}>
                     <strong>{tech.name}:</strong> {tech.description}
                   </p>
                 </div>
-              );
-            })}
+              ))}
           </div>
         </FadeInSection>
       </div>

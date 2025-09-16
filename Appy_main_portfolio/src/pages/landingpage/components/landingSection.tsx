@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Cory from "../../../assets/Pages/landingPage/landingSection/coryIrwin.png";
 import CoryIrwinGradient from "./animations/CoryIrwinGradient";
 import FadeInSection from "./animations/FadeInSection";
@@ -6,15 +6,13 @@ import TechStackShowcase from "./animations/TechStackShowcase";
 import ProjectsGrid from "./projectsGrid";
 import AmbientBackground from "./animations/BackgroundAmbientGradient";
 import Navbar from "../../fundamentalPageComponents/navbar";
+import useTheme from "../../../hooks/useTheme";
 
 const LandingSection = () => {
-  const [darkMode, setDarkMode] = useState(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const { activeTheme, updateTheme } = useTheme()
 
-  useEffect(() => {
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
+  const darkMode = activeTheme === 'Dark'
+  const setDarkMode = (dark: boolean) => updateTheme(dark ? 'Dark' : 'Light')
 
   // Text color helpers
   const textColor = darkMode ? "text-white" : "text-gray-900";

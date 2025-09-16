@@ -1,6 +1,7 @@
 import React from "react";
 import Github from "../../../assets/Pages/landingPage/landingSection/gitter.svg";
 import Link from "../../../assets/Pages/landingPage/landingSection/link.svg";
+import useTheme from "../../../hooks/useTheme";
 
 interface ProjectCardProps {
   title: string;
@@ -19,8 +20,14 @@ function ProjectCard({
   githubLink,
   liveLink,
 }: ProjectCardProps) {
+  const { activeTheme } = useTheme()
+  
+  const darkMode = activeTheme === 'Dark'
+
   return (
-    <div className="rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm mx-auto bg-white text-gray-900 flex flex-col">
+    <div className="rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm mx-auto text-gray-900 flex flex-col" style={{
+      background: darkMode ? '#333' : 'white'
+    }}>
       {/* Image on top */}
       <div className="w-full h-48 md:h-64 overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -29,9 +36,11 @@ function ProjectCard({
       {/* Info below */}
       <div className="p-8 flex flex-col justify-between flex-1">
         <div>
-          <h2 className="text-2xl font-bold mb-2">{title}</h2>
-          <p className="text-gray-700 text-sm mb-4">{description}</p>
-          <p className="text-gray-500 text-xs mb-4">Tech stack: {techStack}</p>
+          <h2 className="text-2xl font-bold mb-2" style={{
+            color: darkMode ? 'white' : 'black'
+          }}>{title}</h2>
+          <p className="text-gray-500 text-sm mb-4">{description}</p>
+          <p className="text-gray-400 text-xs mb-4">Tech stack: {techStack}</p>
         </div>
 
         {/* Buttons */}
@@ -41,7 +50,7 @@ function ProjectCard({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex  items-center justify-center gap-2 py-2 px-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
+              className="flex-1 flex items-center justify-center gap-2 p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition"
             >
               <img src={Link} alt="Live Preview" className="w-5 h-auto invert" />
               Live Preview

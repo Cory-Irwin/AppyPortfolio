@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { MenuIcon, XIcon } from 'lucide-react'
 
 interface NavbarProps {
   darkMode: boolean;
@@ -32,35 +34,35 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
       >
         {/* Logo */}
         <div className="flex font-bold text-4xl z-20">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={`hover:underline hover:text-purple-500 transition-colors`}
           >
             CI.
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex flex-1 justify-center gap-12 text-2xl font-semibold z-10">
           {["About", "Projects", "CV"].map((link) => (
-            <a
+            <Link
               key={link}
-              href={`/${link.toLowerCase()}Page`}
+              to={`/${link.toLowerCase()}`}
               className="hover:underline hover:text-purple-500 transition-colors"
             >
               {link}
-            </a>
+            </Link>
           ))}
         </div>
 
         {/* Right Section */}
         <div className="flex items-center space-x-4 flex-shrink-0">
-          <a
+          <Link
             className="hidden md:inline-block text-2xl font-semibold hover:underline hover:text-purple-500 transition-colors"
-            href="/contactPage"
+            to="/contact"
           >
             Contact Me
-          </a>
+          </Link>
 
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -79,16 +81,11 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
               darkMode ? "hover:bg-gray-700" : "hover:bg-gray-300"
             }`}
           >
-            {/* 
-              TODO: Replace with SVG icons
-              Example:
-
-              {isOpen ? (
-                <YourCloseSVGIcon className="w-6 h-6" />
-              ) : (
-                <YourHamburgerSVGIcon className="w-6 h-6" />
-              )}
-            */}
+            {isOpen ? (
+              <XIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -98,13 +95,13 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
             className={`absolute top-full left-0 w-full shadow-lg rounded-b-lg md:hidden flex flex-col items-center py-4 space-y-4 transition-colors ${mobileBg}`}
           >
             {["About", "Projects", "CV", "Contact Me"].map((link) => (
-              <a
+              <Link
                 key={link}
-                href={`/${link.replace(" ", "").toLowerCase()}Page`}
+                to={`/${link.split(' ')[0].toLowerCase()}`}
                 className="text-xl font-semibold hover:underline hover:text-purple-500 transition-colors"
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
         )}

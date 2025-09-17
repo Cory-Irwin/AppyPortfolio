@@ -1,4 +1,3 @@
-import React from "react";
 import Github from "../../../assets/Pages/landingPage/landingSection/gitter.svg";
 import Link from "../../../assets/Pages/landingPage/landingSection/link.svg";
 import useTheme from "../../../hooks/useTheme";

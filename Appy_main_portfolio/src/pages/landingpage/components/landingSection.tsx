@@ -15,7 +15,6 @@ const LandingSection = () => {
   const setDarkMode = (dark: boolean) => updateTheme(dark ? 'Dark' : 'Light')
 
   // Text color helpers
-  const textColor = darkMode ? "text-white" : "text-gray-900";
   const subTextColor = darkMode ? "text-gray-300" : "text-gray-700";
 
   return (
@@ -30,18 +29,27 @@ const LandingSection = () => {
             {/* Text */}
             <div className="text-center md:text-left flex-1">
               <h1
-                className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4 ${textColor}`}
+                className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4`}
+                style={{
+                  color: !darkMode ? '#101828' : 'white'
+                }}
               >
                 G'Day! 👋
               </h1>
               <h1
-                className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4 ${textColor}`}
+                className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-4`}
+                style={{
+                  color: !darkMode ? '#101828' : 'white'
+                }}
               >
                 My name is
               </h1>
               <CoryIrwinGradient />
               <h1
-                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-4 font-bold ${textColor}`}
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-4 font-bold`}
+                style={{
+                  color: !darkMode ? '#101828' : 'white'
+                }}
               >
                 I'm a Junior Front-End Web Developer
               </h1>
@@ -65,7 +73,10 @@ const LandingSection = () => {
           <FadeInSection delay={300}>
             <div className="text-center mt-16 sm:mt-20 font-semibold">
               <h1
-                className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl py-4 font-bold ${textColor}`}
+                className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl py-4 font-bold`}
+                style={{
+                  color: !darkMode ? '#101828' : 'white'
+                }}
               >
                 My Tech Stack
               </h1>
@@ -84,7 +95,10 @@ const LandingSection = () => {
             <div className="text-center mt-16 sm:mt-20 font-semibold py-16 sm:py-20">
               <a
                 href="/ProjectsPage"
-                className={`hover:underline text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} hover:text-purple-500`}
+                className={`hover:underline text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 hover:text-purple-500`}
+                style={{
+                  color: !darkMode ? '#101828' : 'white'
+                }}
               >
                 Projects
               </a>
@@ -103,11 +117,14 @@ const LandingSection = () => {
       <section aria-label="About Me" className="py-20 mt-128 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
-        <h2
+            <h2
 
-              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2`}
+              style={{
+                color: !darkMode ? '#101828' : 'white'
+              }}
             >
-           About Me
+              About Me
             </h2>
             <p
               className={`mt-4 text-lg sm:text-xl md:text-2xl ${subTextColor}`}
@@ -125,12 +142,15 @@ const LandingSection = () => {
       <section aria-label="Experience" className="mt-128  py-20 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
-                   <h2
+            <h2
 
-              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2`}
+              style={{
+                color: !darkMode ? '#101828' : 'white'
+              }}
             >
-           My experience
-                      </h2>
+              My experience
+            </h2>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-10">
               {[
                 { number: "12+", label: "Projects Completed" },
@@ -142,7 +162,10 @@ const LandingSection = () => {
                   key={idx}
                   className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105"
                 >
-                  <p className={`text-5xl font-bold ${textColor}`}>
+                  <p className={`text-5xl font-bold`}
+                    style={{
+                      color: !darkMode ? '#101828' : 'white'
+                    }}>
                     {item.number}
                   </p>
                   <p className={`mt-2 ${subTextColor}`}>{item.label}</p>
@@ -153,54 +176,67 @@ const LandingSection = () => {
         </FadeInSection>
       </section>
 
-        <section aria-label="Fun Facts" className="mt-128 py-20 bg-transparent">
-    <FadeInSection>
-      <div className="max-w-5xl mx-auto text-center px-4">
-                <h2
+      <section aria-label="Fun Facts" className="mt-128 py-20 bg-transparent">
+        <FadeInSection>
+          <div className="max-w-5xl mx-auto text-center px-4">
+            <h2
 
-              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2`}
+              style={{
+                color: !darkMode ? '#101828' : 'white'
+              }}
             >
-        Fun Facts
-                      </h2>
-        <div className="mt-12 grid md:grid-cols-3 gap-10">
-          {[
-            { title: "🎮 Gaming Enthusiast", text: "I love strategy games and retro consoles." },
-            { title: "📚 Lifelong Learner", text: "Always exploring new frameworks and libraries." },
-            { title: "🌏 Traveler", text: "I enjoy exploring cultures and taking inspiration from design worldwide." },
-          ].map((item, idx) => (
-            <div key={idx} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105">
-              <p className={`text-2xl font-bold ${textColor}`}>{item.title}</p>
-              <p className={`${subTextColor}`}>{item.text}</p>
+              Fun Facts
+            </h2>
+            <div className="mt-12 grid md:grid-cols-3 gap-10">
+              {[
+                { title: "🎮 Gaming Enthusiast", text: "I love strategy games and retro consoles." },
+                { title: "📚 Lifelong Learner", text: "Always exploring new frameworks and libraries." },
+                { title: "🌏 Traveler", text: "I enjoy exploring cultures and taking inspiration from design worldwide." },
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105">
+                  <p className={`text-2xl font-bold`}
+
+                    style={{
+                      color: !darkMode ? '#101828' : 'white'
+                    }}>{item.title}</p>
+                  <p className={`${subTextColor}`}>{item.text}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </FadeInSection>
-  </section>
+          </div>
+        </FadeInSection>
+      </section>
 
-    <section aria-label="Blog" className="mt-128 pb-24 bg-transparent">
-    <FadeInSection>
-      <div className="max-w-5xl mx-auto text-center px-4">
-    <h2
+      <section aria-label="Blog" className="mt-128 pb-24 bg-transparent">
+        <FadeInSection>
+          <div className="max-w-5xl mx-auto text-center px-4">
+            <h2
 
-              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2 ${textColor} `}
+              className={`sm:text-5xl md:text-6xl lg:text-8xl font-bold py-2`}
+              style={{
+                color: !darkMode ? '#101828' : 'white'
+              }}
             >
- Latest Articles
-                      </h2>
-        <p className={`mt-4 ${subTextColor}`}>Sharing what I’ve learned and projects I’m working on.</p>
-        <div className="mt-12 grid md:grid-cols-3 gap-10">
-          {[1,2,3].map((i) => (
-            <div key={i} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg">
-              <h3 className={`text-xl font-bold ${textColor}`}>Article {i}</h3>
-              <p className={`mt-2 ${subTextColor}`}>Brief description of the article content.</p>
-              <a href={`/blog/article${i}`} className="mt-4 inline-block text-blue-500 hover:text-purple-500 font-semibold">Read More →</a>
+              Latest Articles
+            </h2>
+            <p className={`mt-4 ${subTextColor}`}>Sharing what I’ve learned and projects I’m working on.</p>
+            <div className="mt-12 grid md:grid-cols-3 gap-10">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg">
+                  <h3 className={`text-xl font-bold`}
+                    style={{
+                      color: !darkMode ? '#101828' : 'white'
+                    }}>Article {i}</h3>
+                  <p className={`mt-2 ${subTextColor}`}>Brief description of the article content.</p>
+                  <a href={`/blog/article${i}`} className="mt-4 inline-block text-blue-500 hover:text-purple-500 font-semibold">Read More →</a>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div> 
-    </FadeInSection>
-  </section>
-  
+          </div>
+        </FadeInSection>
+      </section>
+
     </AmbientBackground>
   );
 };

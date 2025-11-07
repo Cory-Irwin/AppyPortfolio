@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import "./AmbientBackground.css"; // import the CSS we’ll create
+import "./AmbientBackground.css"; 
 
 interface AmbientBackgroundProps {
   children?: ReactNode;

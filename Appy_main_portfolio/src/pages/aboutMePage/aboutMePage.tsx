@@ -24,7 +24,7 @@ function AboutPage() {
         {/* Navbar controls dark mode now */}
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
-        <div className="max-w-4xl mx-auto px-6 py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto mt-15 px-6 py-8 sm:py-12">
           {/* About Me */}
           <FadeInSection delay={0}>
             <section className="mb-12">
@@ -68,6 +68,20 @@ function AboutPage() {
                 </div>
               </div>
             </section>
+             <section className="mb-12">
+            
+              <div className="space-y-4">
+                <div className={`p-5 rounded-lg shadow-sm ${cardBg}`}>
+                  <h3 className="text-lg font-semibold">{`Retail Associate`}</h3>
+                  <p className={`text-sm ${cardSubText}`}>Hardware & General – Brookvale | Aug 2020 – Current</p>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Enhanced interpersonal skills through stakeholder & customer engagement</li>
+                    <li>Developed problem-solving and escalation practices</li>
+                    <li>Gained experience with enterprise software frameworks & e-commerce tools</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
           </FadeInSection>
 
           {/* Education */}
@@ -87,10 +101,11 @@ function AboutPage() {
                 </ul>
               </div>
             </section>
+            
           </FadeInSection>
 
           {/* Volunteering */}
-          <FadeInSection delay={900}>
+          <FadeInSection delay={1200}>
             <section>
               <h2 className={`text-2xl sm:text-3xl font-semibold mb-4 ${textColor}`}>Volunteering</h2>
               <ul className="space-y-3">

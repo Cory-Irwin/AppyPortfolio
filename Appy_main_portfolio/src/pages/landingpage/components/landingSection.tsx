@@ -7,6 +7,7 @@ import ProjectsGrid from "./projectsGrid";
 import AmbientBackground from "./animations/BackgroundAmbientGradient";
 import Navbar from "../../fundamentalPageComponents/navbar";
 import useTheme from "../../../hooks/useTheme";
+import Footer from "../../fundamentalPageComponents/footer";
 
 const LandingSection = () => {
   const { activeTheme, updateTheme } = useTheme()
@@ -69,7 +70,7 @@ const LandingSection = () => {
         </FadeInSection>
 
         {/* Tech Stack Section */}
-        <div className="mt-128">
+        <div className="mt-48">
           <FadeInSection delay={300}>
             <div className="text-center mt-16 sm:mt-20 font-semibold">
               <h1
@@ -90,7 +91,7 @@ const LandingSection = () => {
           </FadeInSection>
         </div>
         {/* Projects Section */}
-        <div className="mt-128 pb-64">
+        <div className="">
           <FadeInSection delay={300}>
             <div className="text-center mt-16 sm:mt-20 font-semibold py-16 sm:py-20">
               <a
@@ -105,7 +106,7 @@ const LandingSection = () => {
               <p
                 className={`text-lg sm:text-xl md:text-2xl lg:text-4xl py-6 ${subTextColor}`}
               >
-                I've created or contributed to.
+                I've created, currently working on or contributed to.
               </p>
               <div className="w-full mx-auto max-w-screen-xl my-6 sm:my-10 px-2 sm:px-4">
                 <ProjectsGrid />
@@ -114,7 +115,7 @@ const LandingSection = () => {
           </FadeInSection>
         </div>
       </div>
-      <section aria-label="About Me" className="py-20 mt-128 bg-transparent">
+      <section aria-label="About Me" className="  bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2
@@ -131,15 +132,17 @@ const LandingSection = () => {
             >
               Born in Australia, I have always been fascinated by how the web
               works. Exploring how websites are built and understanding best
-              practices in web development has been a passion of mine. Over
+              practices in web development has been a passion of mine. <br /><br /> Over
               time, my curiosity has grown into a deeper appreciation for the
               complexities of web technologies and the creativity involved in
-              crafting seamless digital experiencee
+              crafting seamless digital experience's. <br /><br />This has led me into a desire to
+              be a Software Engineer. As it allows me to express my creativity in designing
+              beautiful websites that are modern, secure and responsive.
             </p>
           </div>
         </FadeInSection>
       </section>
-      <section aria-label="Experience" className="mt-128  py-20 bg-transparent">
+      <section aria-label="Experience" className="  py-20 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2
@@ -153,9 +156,9 @@ const LandingSection = () => {
             </h2>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-10">
               {[
-                { number: "12+", label: "Projects Completed" },
+                { number: "2+", label: "Projects Completed" },
                 { number: "8+", label: "Technologies" },
-                { number: "2", label: "Years Learning" },
+                { number: "5", label: "Years Learning" },
                 { number: "100%", label: "Passion for Coding" },
               ].map((item, idx) => (
                 <div
@@ -176,7 +179,7 @@ const LandingSection = () => {
         </FadeInSection>
       </section>
 
-      <section aria-label="Fun Facts" className="mt-128 py-20 bg-transparent">
+      <section aria-label="Fun Facts" className="py-20 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2
@@ -190,9 +193,9 @@ const LandingSection = () => {
             </h2>
             <div className="mt-12 grid md:grid-cols-3 gap-10">
               {[
-                { title: "🎮 Gaming Enthusiast", text: "I love strategy games and retro consoles." },
-                { title: "📚 Lifelong Learner", text: "Always exploring new frameworks and libraries." },
-                { title: "🌏 Traveler", text: "I enjoy exploring cultures and taking inspiration from design worldwide." },
+                { title: "📚 Writer at heart", text: "I'd love to be an author. But that won't pay the bills. So the passion I have for writing has been channeled into the code I create." },
+                { title: "🧱 Fundamental Learner", text: "Always While I'm always exploring new frameworks and libraries. I'm forever in love with raw code. Raw HTML, CSS and JavaScript is my core. They are the building blocks that make our tech world spin." },
+                { title: "🌏 Language Learner", text: "Not only do I learn Programming languages like Javascript. I'm also learning a second language. Ten words a day. One Anki card at a time. No mercy, only mastery. Miss a review. Anki won't forget..." },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105">
                   <p className={`text-2xl font-bold`}
@@ -208,7 +211,7 @@ const LandingSection = () => {
         </FadeInSection>
       </section>
 
-      <section aria-label="Blog" className="mt-128 pb-24 bg-transparent">
+      {/* <section aria-label="Blog" className="mt-48 pb-24 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2
@@ -235,8 +238,8 @@ const LandingSection = () => {
             </div>
           </div>
         </FadeInSection>
-      </section>
-
+      </section> */}
+      <Footer />
     </AmbientBackground>
   );
 };

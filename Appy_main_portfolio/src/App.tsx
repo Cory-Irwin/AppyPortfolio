@@ -1,7 +1,7 @@
 import "./Index.css";
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HeroPage from "./pages/landingpage/heroPage";
+import HeroPage from "./pages/landingpage/heroPage"
 import CVPage from "./pages/cvPage/cvPage";
 import AboutPage from "./pages/aboutMePage/aboutMePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";

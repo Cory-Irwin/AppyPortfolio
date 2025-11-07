@@ -43,17 +43,22 @@ function Navbar({ darkMode, setDarkMode }: NavbarProps) {
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex flex-1 justify-center gap-12 text-2xl font-semibold z-10">
-          {["About", "Projects", "CV"].map((link) => (
-            <Link
-              key={link}
-              to={`/${link.toLowerCase()}`}
-              className="hover:underline hover:text-purple-500 transition-colors"
-            >
-              {link}
-            </Link>
-          ))}
-        </div>
+        <div className="hidden md:flex flex-1 justify-center gap-12 text-2xl font-semibold">
+  {[
+    { name: "About", to: "/about" },
+    { name: "Projects", to: "/projects" },
+    { name: "Resume", to: "/cv" },
+  ].map((link) => (
+    <Link
+      key={link.name}
+      to={link.to}
+      className="hover:underline hover:text-purple-500 transition-colors"
+    >
+      {link.name}
+    </Link>
+  ))}
+</div>
+
 
         {/* Right Section */}
         <div className="flex items-center space-x-4 flex-shrink-0">

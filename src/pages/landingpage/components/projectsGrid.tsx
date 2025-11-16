@@ -29,6 +29,22 @@ const projects = [
     githubLink: "https://github.com/yourusername/sample-project",
     liveLink: "https://sample-live-link.com",
   },
+  {
+    title: "AppWorks",
+    description: "Contributer to the blog posting and maintenence of Intra-Design Software's main Website. Director of CSS designing and feedback provider.",
+    image: Intra,
+    techStack: "TypeScript, Vite, TailwindCSS",
+    githubLink: "https://github.com/yourusername/sample-project",
+    liveLink: "https://sample-live-link.com",
+  },
+  {
+    title: "Tafe Projects",
+    description: "Contributer to the blog posting and maintenence of Intra-Design Software's main Website. Director of CSS designing and feedback provider.",
+    image: Intra,
+    techStack: "TypeScript, Vite, TailwindCSS",
+    githubLink: "https://github.com/yourusername/sample-project",
+    liveLink: "https://sample-live-link.com",
+  }
 ];
 
 function ProjectsGrid() {

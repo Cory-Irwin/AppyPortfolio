@@ -28,7 +28,7 @@ const projects = [
     description: "Contributer to the blog posting and maintenence of Intra-Design Software's main Website. Director of CSS designing and feedback provider.",
     image: Intra,
     techStack: "TypeScript, Vite, TailwindCSS",
-    liveLink: "https://sample-live-link.com",
+    liveLink: "https://www.intradesign.com.au/",
   },
  
   {

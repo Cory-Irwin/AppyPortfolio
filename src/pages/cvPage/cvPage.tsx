@@ -16,12 +16,13 @@ function CVPage() {
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }, [darkMode]);
 
-  // Text and background helpers
+  // Dynamic colors
   const textColor = darkMode ? "text-white" : "text-gray-900";
   const subTextColor = darkMode ? "text-gray-300" : "text-gray-700";
+  const cardText = darkMode ? "text-white" : "text-gray-900";
+  const subCardText = darkMode ? "text-white" : "text-gray-500";
+  const borderColor = darkMode ? "text-white" : "border-gray-200";
   const cardBg = darkMode ? "bg-gray-800" : "bg-white";
-  const cardText = darkMode ? "text-gray-100" : "text-gray-900";
-  const borderColor = darkMode ? "border-gray-600" : "border-gray-300";
 
   return (
     <>
@@ -74,7 +75,7 @@ function CVPage() {
                     <li key={skill.id}>
                       {skill.name}
                       {skill.keywords.length > 0 && (
-                        <span className="block text-xs text-gray-400">
+                        <span className={`block text-xs ${subCardText}`}>
                           {skill.keywords.join(", ")}
                         </span>
                       )}
@@ -94,7 +95,7 @@ function CVPage() {
                   {sections.volunteer.items.map((vol) => (
                     <li key={vol.id}>
                       {vol.organization} {vol.date}
-                      <p className="text-xs text-gray-400">
+                      <p className={`text-xs ${subCardText}`}>
                         {vol.summary.replace(/<[^>]+>/g, "")}
                       </p>
                     </li>
@@ -113,7 +114,7 @@ function CVPage() {
                   {sections.references.items.map((ref) => (
                     <li key={ref.id}>
                       {ref.name}{" "}
-                      <span className="text-xs text-gray-400">{ref.description}</span>
+                      <span className={`text-xs ${subCardText}`}>{ref.description}</span>
                     </li>
                   ))}
                 </ul>
@@ -138,10 +139,10 @@ function CVPage() {
                 {sections.experience.items.map((exp) => (
                   <div key={exp.id} className="mb-4">
                     <p className={`font-semibold ${cardText}`}>{exp.company}</p>
-                    <p className="text-xs italic text-gray-400">{exp.date}</p>
+                    <p className={`text-xs italic ${subCardText}`}>{exp.date}</p>
                     <p className={`text-sm font-medium ${cardText}`}>{exp.position}</p>
                     <div
-                      className="text-sm text-gray-300 mt-1"
+                      className={`text-sm ${subCardText} mt-1`}
                       dangerouslySetInnerHTML={{ __html: exp.summary }}
                     />
                   </div>
@@ -158,9 +159,9 @@ function CVPage() {
                 {sections.education.items.map((edu) => (
                   <div key={edu.id} className={`${cardText}`}>
                     <p className={`font-semibold ${cardText}`}>{edu.institution}</p>
-                    <p className="text-xs italic text-gray-400">{edu.date}</p>
+                    <p className={`text-xs italic ${subCardText}`}>{edu.date}</p>
                     <div
-                      className="text-sm mt-1"
+                      className={`text-sm ${subCardText} mt-1`}
                       dangerouslySetInnerHTML={{ __html: edu.summary }}
                     />
                   </div>

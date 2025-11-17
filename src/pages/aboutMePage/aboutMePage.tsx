@@ -68,7 +68,7 @@ function AboutPage() {
                 </div>
               </div>
             </section>
-             <section className="mb-12">
+             {/* <section className="mb-12">
             
               <div className="space-y-4">
                 <div className={`p-5 rounded-lg shadow-sm ${cardBg}`}>
@@ -81,7 +81,7 @@ function AboutPage() {
                   </ul>
                 </div>
               </div>
-            </section>
+            </section> */}
           </FadeInSection>
 
           {/* Education */}

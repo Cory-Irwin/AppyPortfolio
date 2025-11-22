@@ -14,7 +14,8 @@ const projects = [
     techStack: "React, Node.js, TailwindCSS",
     githubLink: "https://github.com/Cory-Irwin/Appy_Ecommerce_Admin",
   
-  },
+  }
+  ,
   {
     title: "Tech Ecommerce Website",
     description: "Ecommerce website designed with Cilicon Ecommerce Figma Design inspriation. ",

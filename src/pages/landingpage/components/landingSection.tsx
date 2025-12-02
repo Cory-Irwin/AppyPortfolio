@@ -194,7 +194,7 @@ const LandingSection = () => {
             <div className="mt-12 grid md:grid-cols-3 gap-10">
               {[
                 { title: "📚 Writer at heart", text: "I'd love to be an author. But that won't pay the bills. So the passion I have for writing has been channeled into the code I create." },
-                { title: "🧱 Fundamental Learner", text: "Always While I'm always exploring new frameworks and libraries. I'm forever in love with raw code. Raw HTML, CSS and JavaScript is my core. They are the building blocks that make our tech world spin." },
+                { title: "🧱 Fundamental Learner", text: "I'm always exploring new frameworks and libraries. I'm forever in love with raw code. Raw HTML, CSS and JavaScript is my core. They are the building blocks that make our tech world spin." },
                 { title: "🌏 Language Learner", text: "Not only do I learn Programming languages like Javascript. I'm also learning a second language. Ten words a day. One Anki card at a time. No mercy, only mastery. Miss a review. Anki won't forget..." },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white/20 dark:bg-gray-800/30 rounded-lg p-6 shadow-lg transition-transform transform hover:-translate-y-2 hover:scale-105">

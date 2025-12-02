@@ -130,7 +130,7 @@ const LandingSection = () => {
             <p
               className={`mt-4 text-lg sm:text-xl md:text-2xl ${subTextColor}`}
             >
-              Born in Australia, I have always been fascinated by how the web
+              Born in Australia, growing up I have always been fascinated by how the web
               works. Exploring how websites are built and understanding best
               practices in web development has been a passion of mine. <br /><br /> Over
               time, my curiosity has grown into a deeper appreciation for the

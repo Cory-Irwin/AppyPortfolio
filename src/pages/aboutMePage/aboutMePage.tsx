@@ -32,14 +32,14 @@ function AboutPage() {
               <div>
                 <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${textColor}`}>About Me</h2>
                 <p className={`text-base sm:text-lg md:text-xl leading-relaxed ${subTextColor}`}>
-                  Born in Australia, I have always been fascinated by how the web works. Exploring how websites are built and
+                  Born in Australia, growing up I have always been fascinated by how the web works. Exploring how websites are built and
                   understanding best practices in web development has been a passion of mine. Over time, my curiosity has grown
                   into a deeper appreciation for the complexities of web
                   technologies and the creativity involved in crafting seamless digital experiences.
                 </p>
               </div>
               <div>
-                <img src={CoryVolenteer} alt="image of Cory Irwin volunteering at Lifeline Cycle Marathon 2025 " className="w-600 h-auto" />
+                <img src={CoryVolenteer} alt="image of Cory Irwin volunteering at Lifeline Cycle Marathon 2025" className="w-600 h-auto" />
               <h1>Me volunteering as checkpoint assistant at Lifeline Cycle Marathon 2025 (It was banana's!).</h1>
               </div>
             </section>

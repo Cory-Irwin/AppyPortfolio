@@ -31,7 +31,7 @@ function ProjectsPage() {
               Projects
             </h1>
             <p className={`text-xl sm:text-3xl md:text-4xl py-4 ${subTextColor}`}>
-              Projects I've created
+        I've created, currently working on or contributed to.
             </p>
             <div className="w-full mx-auto mb-24 ">
               <ProjectsGrid />

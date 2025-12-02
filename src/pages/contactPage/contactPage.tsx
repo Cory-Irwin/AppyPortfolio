@@ -25,7 +25,7 @@ function ContactMe() {
           <h1 className={`text-5xl font-bold mb-8 ${textColor} text-center`}>
             Contact Me
           </h1>
-          <div className="w-full max-w-lg text-xl text-sm lg:text-4xl ${formBg} p-8 rounded-xl shadow-lg space-y-12 bg-gray-200 border-2">
+          <div className="w-full max-w-lg text-xl  lg:text-4xl ${formBg} p-8 rounded-xl shadow-lg space-y-12 bg-gray-200 border-2">
           <h1 className="">Phone Number: (+61)410504373 </h1>
           <h1 className="">Email Address: coryirwin9@gmail.com</h1>
           </div>

@@ -142,7 +142,7 @@ const LandingSection = () => {
           </div>
         </FadeInSection>
       </section>
-      <section aria-label="Experience" className="  py-20 bg-transparent">
+      <section aria-label="Experience" className="py-20 bg-transparent">
         <FadeInSection>
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2
